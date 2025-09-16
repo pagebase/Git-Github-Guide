@@ -18,5 +18,5 @@
 # Delete local branch
 `git branch -D branch-name`
 
-# How to fetch remore branches locally?
+# How to fetch remote branches locally?
 `git fetch --all`
