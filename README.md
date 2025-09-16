@@ -17,3 +17,6 @@
 `git push origin --delete branch-name`
 # Delete local branch
 `git branch -D branch-name`
+
+# How to fetch remore branches locally?
+`git fetch --all`
