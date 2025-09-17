@@ -20,3 +20,28 @@
 
 # How to fetch remote branches locally?
 `git fetch --all`
+
+---
+If you want your local branch to **exactly match the remote branch** (discarding **all** local changes and commits), you can do the following:
+
+```bash
+# Make sure you’re on the branch you want to reset
+git checkout <branch-name>
+
+# Fetch the latest refs from remote
+git fetch origin
+
+# Reset your local branch to match the remote exactly
+git reset --hard origin/<branch-name>
+
+# Clean untracked files and directories (optional but often useful)
+git clean -fd
+```
+
+### Breakdown:
+
+* `git fetch origin` → updates your local knowledge of the remote branch.
+* `git reset --hard origin/<branch-name>` → makes your local branch point to the same commit as the remote, discarding **all local commits and changes**.
+* `git clean -fd` → removes untracked files and directories (like generated files, temp files).
+
+⚠️ **Warning:** This will permanently erase any uncommitted local changes and commits that aren’t pushed to remote.
