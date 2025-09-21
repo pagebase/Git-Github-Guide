@@ -45,3 +45,10 @@ git clean -fd
 * `git clean -fd` → removes untracked files and directories (like generated files, temp files).
 
 ⚠️ **Warning:** This will permanently erase any uncommitted local changes and commits that aren’t pushed to remote.
+
+---
+# Local repo showing branch which isn't at remote
+
+```git
+git fetch --prune
+```
